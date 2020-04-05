@@ -51,10 +51,10 @@
 		<script id="tools" type="text/html">
 		{{#rows}}
 		<div id="{{rowNumber}}" class="tool-box {{#checkedout}}not-{{/checkedout}}available">
-			<span class="tool-box-tool">{{tool}}</span>
+			<span class="tool-box-tool">{{titolo}}</span>
 			<div class="tool-box-bottom {{rowNumber}}">
 				{{#checkedout}} <span class="tool-box-borrowed">IN PRESTITO</span>{{/checkedout}}
-				{{^checkedout}}<a href="mailto:{{owneremail}}?subject=Prestito libro: {{tool}}"><span class="tool-box-borrow btn">RICHIEDI</span></a>{{/checkedout}}
+				{{^checkedout}}<a href="mailto:{{owneremail}}?subject=Prestito libro: {{titolo}}"><span class="tool-box-borrow btn">RICHIEDI</span></a>{{/checkedout}}
 				<ul>
 					<li><small>CHI / DOVE : </small></li>
 					<li><a href="mailto:{{owneremail}}">{{owner}}</a></li>
