@@ -50,7 +50,7 @@
 
 		<script id="tools" type="text/html">
 		{{#rows}}
-		<div id="{{rowNumber}}" class="tool-box {{#checkedout}}not-{{/checkedout}}available">
+		<div id="{{rowNumber}}" class="tool-box {{#inprestito}}not-{{/inprestito}}available">
 			<span class="tool-box-tool">{{titolo}}</span>
 			<div class="tool-box-bottom {{rowNumber}}">
 				{{#inprestito}} <span class="tool-box-borrowed">IN PRESTITO</span>{{/inprestito}}
