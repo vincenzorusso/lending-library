@@ -53,11 +53,11 @@
 		<div id="{{rowNumber}}" class="tool-box {{#inprestito}}not-{{/inprestito}}available">
 			<span class="tool-box-tool">{{titolo}}</span>
 			<div class="tool-box-bottom {{rowNumber}}">
-				{{#inprestito}} <span class="tool-box-borrowed">IN PRESTITO</span>{{/inprestito}}
+				{{#inprestito}} <span class="tool-box-borrowed">IN PRESTITO a {{inprestitoa}}</span>{{/inprestito}}
 				{{^inprestito}}<a href="mailto:{{owneremail}}?subject=Prestito libro: {{titolo}}"><span class="tool-box-borrow btn">RICHIEDI</span></a>{{/inprestito}}
 				<ul>
 					<li><small>CHI / DOVE : </small></li>
-					<li><a href="mailto:{{owneremail}}">{{owner}}</a></li>
+					<li><a href="mailto:{{owneremail}}">{{propietario}}</a></li>
 					<li>{{street}}, {{city}}, {{state}}</li>
 					<li><a href="https://maps.google.com/maps?q={{street}},{{city}},{{state}}" target="_blank"><small>MAP</small></a></li>
 					{{#tooldetails}}
