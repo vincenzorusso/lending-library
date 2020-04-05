@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 	<html lang="en">
-		<title>Tool Lending</title>
+		<title>Libreria della 3a B</title>
 		<meta charset='utf-8'>
 		<script type="text/javascript" src="js/ICanHaz.js"></script>
 		<script type="text/javascript" src='js/jquery.js'></script>
@@ -14,24 +14,22 @@
 		<header class="container">
 			<h1>Tool Lending</h1>
 			<ul class="nav">
-				<li><strong>LENDING IS LOVELY</strong></li>
-				<li>AN OPEN SOURCE, EASY TO DUPLICATE PROJECT</li>
-				<li><a href="#info">HERE'S HOW</a></li>
+				<li><strong>Lo spazio per scambiarsi libri da leggere</strong></li>
 			</ul>
 		</header>
 		<div id="filters" class="container">
-			<input id="toolSearch" type="search" placeholder="hammer.."></input>
-			<span class="clear sml-button">Clear</span>
-			<span id="showAvailable" class="sml-button">Show Available</span>
+			<input id="toolSearch" type="search" placeholder="titolo.."></input>
+			<span class="clear sml-button">Cancella ricerca</span>
+			<span id="showAvailable" class="sml-button">Mostra solo i libri disponibili</span>
 		</div>
-		<div id="tools" class="container"><span class="flash animated">LOADING...</span></div>
+		<div id="tools" class="container"><span class="flash animated">Carico i libri...</span></div>
 		<div id="info" class="container">
 				<div class="span1">
-					<h4>CONTRIBUTE TO THIS LIBRARY</h4>
-					<p>If you've been invited by the person who initiated this near you, you'll have access and the ability to edit the rows of the spreadsheet feeding data to this site.</p>
-					<p>Simply add the rows for the tools you have and add yes if an item is currently being borrowed. Easy, the Spreadsheet auto-saves, too!</p>
+					<h4>CONTRIBUISCI ALLA BIBLIOTECA</h4>
+					<p>Se se stato invitato, puoi aggiungere i tuoi libri che vuoi prestare al file google sheet che alimenta questo sito.</p>
+					<p>Aggiungi le righe in fondo e compila i campi. Metti si se il libro è in prestito. Il file salva da solo!</p>
 
-					<p>More details for using this project <a href="http://www.github.com/jlord/lending-library" target="_blank">here</a>.
+					<p>Più dettagli sul progetto<a href="http://www.github.com/jlord/lending-library" target="_blank"> qui</a>.
 
 				</div>
 
@@ -55,15 +53,15 @@
 		<div id="{{rowNumber}}" class="tool-box {{#checkedout}}not-{{/checkedout}}available">
 			<span class="tool-box-tool">{{tool}}</span>
 			<div class="tool-box-bottom {{rowNumber}}">
-				{{#checkedout}} <span class="tool-box-borrowed">ON LOAN</span>{{/checkedout}}
-				{{^checkedout}}<a href="mailto:{{owneremail}}?subject=Tool Lending: {{tool}}"><span class="tool-box-borrow btn">BORROW</span></a>{{/checkedout}}
+				{{#checkedout}} <span class="tool-box-borrowed">IN PRESTITO</span>{{/checkedout}}
+				{{^checkedout}}<a href="mailto:{{owneremail}}?subject=Prestito libro: {{tool}}"><span class="tool-box-borrow btn">RICHIEDI</span></a>{{/checkedout}}
 				<ul>
-					<li><small>WHO / WHERE : </small></li>
+					<li><small>CHI / DOVE : </small></li>
 					<li><a href="mailto:{{owneremail}}">{{owner}}</a></li>
 					<li>{{street}}, {{city}}, {{state}}</li>
 					<li><a href="https://maps.google.com/maps?q={{street}},{{city}},{{state}}" target="_blank"><small>MAP</small></a></li>
 					{{#tooldetails}}
-					<li><small>NOTES : </small>{{tooldetails}}</li>
+					<li><small>NOTE : </small>{{tooldetails}}</li>
 					{{/tooldetails}}
 				</ul>
 			</div>
