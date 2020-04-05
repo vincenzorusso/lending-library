@@ -55,9 +55,9 @@ function toggleAvailable(state) {
 
     // Update the button text
     if (button.hasClass('button-pressed')) {
-        button.html("Show All")
+        button.html("Mostra tutti")
     } else {
-        button.html("Show Available")
+        button.html("Mostra disponibili")
     }
 }
 
